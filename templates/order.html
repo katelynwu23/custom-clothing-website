@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Custom Order | Made By Mel</title>
+  <link rel="stylesheet" href="../static/css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">Made By Mel</a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="order.html" class="active">Custom Order</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="page-header">
+    <h1>Request a Custom Piece</h1>
+    <p>Tell us what you're picturing, and we'll take it from there.</p>
+  </section>
+
+  <section class="order-section">
+    <div class="container">
+      <form class="order-form" id="orderForm">
+
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="clothingType">Type of Clothing</label>
+            <select id="clothingType" name="clothingType" required>
+              <option value="" disabled selected>Select a type</option>
+              <option value="dress">Dress</option>
+              <option value="top">Top</option>
+              <option value="pants">Pants / Skirt</option>
+              <option value="outerwear">Outerwear</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="color">Preferred Color</label>
+            <input type="text" id="color" name="color" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="size">Size</label>
+          <select id="size" name="size" required>
+            <option value="" disabled selected>Select a size</option>
+            <option value="xs">XS</option>
+            <option value="s">S</option>
+            <option value="m">M</option>
+            <option value="l">L</option>
+            <option value="xl">XL</option>
+            <option value="custom">Custom / Not Sure</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="measurements">Measurements <span class="optional">(optional)</span></label>
+          <textarea id="measurements" name="measurements" placeholder="e.g. Bust: 34in, Waist: 28in, Hips: 38in"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="description">Describe What You Want</label>
+          <textarea id="description" name="description" placeholder="Fabric, style, inspiration, occasion — anything that helps us picture it." required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit Request</button>
+
+        <p class="form-message" id="formMessage"></p>
+
+      </form>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Made By Mel. All rights reserved.</p>
+  </footer>
+
+  <script src="../static/js/script.js"></script>
+</body>
+</html>
