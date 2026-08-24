@@ -19,22 +19,22 @@
       </button>
 
       <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="order.html" class="active">Custom Order</a></li>
-        <li><a href="about.html">About</a></li>
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+        <li><a href="{{ url_for('order') }}">Custom Order</a></li>
+        <li><a href="{{ url_for('about') }}">About</a></li>
       </ul>
     </nav>
   </header>
 
   <section class="page-header">
     <h1>Request a Custom Piece</h1>
-    <p>Tell us what you're picturing, and we'll take it from there.</p>
+    <p>From concept to garment, made just for you.</p>
   </section>
 
   <section class="order-section">
     <div class="container">
-      <form class="order-form" id="orderForm">
+      <form id="orderForm" method="POST" action="/order"> 
 
         <div class="form-group">
           <label for="name">Name</label>

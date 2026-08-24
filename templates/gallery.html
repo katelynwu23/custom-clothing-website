@@ -19,10 +19,10 @@
       </button>
 
       <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="gallery.html" class="active">Gallery</a></li>
-        <li><a href="order.html">Custom Order</a></li>
-        <li><a href="about.html">About</a></li>
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+        <li><a href="{{ url_for('order') }}">Custom Order</a></li>
+        <li><a href="{{ url_for('about') }}">About</a></li>
       </ul>
     </nav>
   </header>
@@ -36,52 +36,52 @@
     <div class="container">
       <div class="gallery-grid">
 
-        <!-- TODO: replace each .gallery-image div with <img src="../static/images/your-photo.jpg" alt="..."> -->
+        <!-- TODO: replace each remaining .gallery-image div with <img src="../static/images/your-photo.jpg" alt="..."> -->
         <div class="gallery-card">
-          <div class="gallery-image">Photo 1</div>
+          <img src="../static/images/gallery-pretty-in-pink.jpg" alt="Pretty in pink 💗💐🌸🌸" class="gallery-image" />
           <div class="gallery-info">
-            <h3>Custom Piece Name</h3>
-            <span>Category</span>
+            <h3>Pretty in pink 💗💐🌸🌸</h3>
+            <span>Matching set</span>
           </div>
         </div>
 
         <div class="gallery-card">
-          <div class="gallery-image">Photo 2</div>
+          <img src="../static/images/gallery-iu-top.jpg" alt="The only thing hotter than IU is this top 🔥🔥" class="gallery-image" />
           <div class="gallery-info">
-            <h3>Custom Piece Name</h3>
-            <span>Category</span>
+            <h3>The only thing hotter than IU is this top 🔥🔥</h3>
+            <span>Top</span>
           </div>
         </div>
 
         <div class="gallery-card">
-          <div class="gallery-image">Photo 3</div>
+          <img src="../static/images/gallery-little-black-dress.jpg" alt="Little black dress 🖤" class="gallery-image" />
           <div class="gallery-info">
-            <h3>Custom Piece Name</h3>
-            <span>Category</span>
+            <h3>Little black dress 🖤</h3>
+            <span>Dress</span>
           </div>
         </div>
 
         <div class="gallery-card">
-          <div class="gallery-image">Photo 4</div>
+          <img src="../static/images/gallery-button-up-tops2.jpg" alt="Back to school basics📖📏🖌️" class="gallery-image" style="object-position: 35% center;" />
           <div class="gallery-info">
-            <h3>Custom Piece Name</h3>
-            <span>Category</span>
+            <h3>Back to school basics📖📏🖌️</h3>
+            <span>Top</span>
           </div>
         </div>
 
         <div class="gallery-card">
-          <div class="gallery-image">Photo 5</div>
+          <img src="../static/images/gallery-blue-top.jpg" alt="Summer blues🫐🧵🧵🩵" class="gallery-image" />
           <div class="gallery-info">
-            <h3>Custom Piece Name</h3>
-            <span>Category</span>
+            <h3>Summer blues🫐🧵🧵🩵</h3>
+            <span>Top</span>
           </div>
         </div>
 
         <div class="gallery-card">
-          <div class="gallery-image">Photo 6</div>
+          <img src="../static/images/gallery-groutfit.jpg" alt="Who said groufits couldn't be cute🩶🩶🩶" class="gallery-image" />
           <div class="gallery-info">
-            <h3>Custom Piece Name</h3>
-            <span>Category</span>
+            <h3>Who said groufits couldn't be cute🩶🩶🩶</h3>
+            <span>Matching Set</span>
           </div>
         </div>
 

@@ -28,11 +28,29 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-body);
   color: var(--color-text);
   background-color: var(--color-bg);
   line-height: 1.6;
+}
+
+/* Full-screen "swipe" scrolling — only active on the home page (body.home) */
+body.home {
+  scroll-snap-type: y mandatory;
+}
+
+.snap-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 
 h1, h2, h3 {
@@ -118,7 +136,7 @@ img {
 }
 
 .hero-logo {
-  width: min(420px, 85%);
+  width: min(600px, 85%);
   margin: 0 auto 1.5rem;
 }
 
@@ -166,7 +184,7 @@ img {
 ======================================== */
 .hero {
   background: linear-gradient(135deg, var(--color-bg-alt), var(--color-bg));
-  padding: 6rem 1.5rem;
+  padding: 1.5rem;
   text-align: center;
 }
 
@@ -175,23 +193,9 @@ img {
   margin: 0 auto;
 }
 
-.hero h1 {
-  font-size: 2.75rem;
-  margin-bottom: 1.25rem;
-  color: var(--color-text);
-}
-
 .hero p {
   font-size: 1.1rem;
   color: var(--color-text-light);
-  margin-bottom: 2.25rem;
-}
-
-.hero-buttons {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
 }
 
 /* ========================================
@@ -307,6 +311,7 @@ img {
 /* Placeholder "photo" block — swap for a real <img> later */
 .gallery-image {
   aspect-ratio: 3 / 4;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -314,6 +319,7 @@ img {
   font-size: 0.9rem;
   letter-spacing: 0.05em;
   background: linear-gradient(135deg, var(--color-accent), var(--color-accent-dark));
+  object-fit: cover;
 }
 
 .gallery-info {

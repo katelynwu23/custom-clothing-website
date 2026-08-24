@@ -1,0 +1,27 @@
+<h1> Order Requests </h1>
+
+<table> 
+    <tr> <!-- tr = table row -->>
+        <th>Name</th> <!-- th = table header -->
+        <th>Email</th>
+        <th>Clothing Type</th>
+        <th>Color</th>
+        <th>Size</th>
+        <th>Measurements</th>
+        <th>Description</th>
+    </tr>
+
+    <!-- use Jinja (denotated by special syntax to write loop -->
+    <!-- Jinja = Flask's template language -->
+    {% for order in orders %}
+    <tr>
+        <td>{{ order["name"] }}</td> <!-- td = table data, order["name"] = accessing "name" field of current order-->
+        <td>{{ order["email"] }}</td>
+        <td>{{ order["clothing"] }}</td>
+        <td>{{ order["color"] }}</td>
+        <td>{{ order["size"] }}</td>
+        <td>{{ order["measurement"] }}</td>
+        <td>{{ order["description"] }}</td>
+    </tr>
+    {% end for %}
+</table>

@@ -19,12 +19,8 @@ const orderForm = document.getElementById('orderForm');
 const formMessage = document.getElementById('formMessage');
 
 if (orderForm && formMessage) {
-  orderForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-
+  orderForm.addEventListener('submit', () => {
     formMessage.textContent = 'Thanks! Your custom order request has been noted (this form isn\'t connected to anything yet).';
     formMessage.classList.add('visible');
-
-    orderForm.reset();
   });
 }
