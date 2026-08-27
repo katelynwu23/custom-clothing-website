@@ -67,7 +67,7 @@ def about():
     return render_template("about.html")
 
 @app.route("/admin")
-def about(): 
+def admin(): 
     conn = sqlite3.connect("data.db")
     conn.row_factory = sqlite3.Row
 
